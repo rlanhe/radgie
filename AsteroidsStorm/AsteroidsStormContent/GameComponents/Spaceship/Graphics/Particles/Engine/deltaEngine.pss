@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ParticleSystemSettings>
+  <MaxParticles>1200</MaxParticles>
+  <Duration>0.00:00:00.5</Duration>
+  <DurationRandomness>1</DurationRandomness>
+  <EmitterVelocitySensitivity>0.0</EmitterVelocitySensitivity>
+  <MinHorizontalVelocity>0</MinHorizontalVelocity>
+  <MaxHorizontalVelocity>0</MaxHorizontalVelocity>
+  <MinVerticalVelocity>0</MinVerticalVelocity>
+  <MaxVerticalVelocity>0</MaxVerticalVelocity>
+  <Gravity>
+    <Vector3>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </Vector3>
+  </Gravity>
+  <EndVelocity>0</EndVelocity>
+  <MinColor>
+    <Color>
+      <R>255</R>
+      <G>255</G>
+      <B>255</B>
+      <A>255</A>
+    </Color>
+  </MinColor>
+  <MaxColor>
+    <Color>
+      <R>100</R>
+      <G>100</G>
+      <B>100</B>
+      <A>255</A>
+    </Color>
+  </MaxColor>
+  <MinRotateSpeed>-60</MinRotateSpeed>
+  <MaxRotateSpeed>60</MaxRotateSpeed>
+  <MinStartSize>0.025</MinStartSize>
+  <MaxStartSize>0.025</MaxStartSize>
+  <MinEndSize>0.025</MinEndSize>
+  <MaxEndSize>0.025</MaxEndSize>
+  <Material>
+    <Relative>../../Materials/engine</Relative>
+  </Material>
+</ParticleSystemSettings>

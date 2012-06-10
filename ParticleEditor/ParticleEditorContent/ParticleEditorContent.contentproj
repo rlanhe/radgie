@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{8C10790F-201E-494B-8016-284895599B7C}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>Content</ContentRootDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>ParticleEditorContent</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.VideoImporters, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="log4net.xml">
+      <Name>log4net</Name>
+      <Importer>XmlFileImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <SubType>
+      </SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="radgieConfig.xml">
+      <SubType>Designer</SubType>
+      <Name>radgieConfig</Name>
+      <Importer>XmlFileImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\RadgieContentPipelineExtensions\RadgieContentPipelineExtensions.csproj">
+      <Project>{59712626-3440-4E40-8821-FDF0456969A1}</Project>
+      <Name>RadgieContentPipelineExtensions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Radgie\Graphics\Effects\debug.fx">
+      <Name>debug</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Radgie\Graphics\Effects\default.fx">
+      <Name>default</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Radgie\Graphics\Effects\defaultLighting.fx">
+      <Name>defaultLighting</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Radgie\Graphics\Effects\particlesSystem.fx">
+      <Name>particlesSystem</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Radgie\Graphics\Materials\debug.m">
+      <Name>debug</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Radgie\Graphics\Materials\default.m">
+      <Name>default</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Radgie\Graphics\Materials\defaultFont.m">
+      <Name>defaultFont</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Effects\asteroid.fx">
+      <Name>asteroid</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Materials\Asteroid\explosion.m">
+      <Name>explosion</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Materials\Asteroid\normal.m">
+      <SubType>Designer</SubType>
+      <Name>normal</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Materials\Bonus\Bomb\bomb.m">
+      <Name>bomb</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Materials\Bonus\Invincibility\invincibility.m">
+      <Name>invincibility</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Materials\Bonus\Life\life.m">
+      <Name>life</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Models\Asteroids\asteroid_01.fbx">
+      <Name>asteroid_01</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Models\Asteroids\asteroid_02.fbx">
+      <Name>asteroid_02</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Models\Asteroids\asteroid_03.fbx">
+      <Name>asteroid_03</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="GameComponents\Asteroid\Graphics\Particles\explosion.pss">
+      <Name>explosion</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\Materials\defaultLighting.m">
+      <Name>defaultLighting</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\BlendStates\additiveBlend.bs">
+      <Name>additiveBlend</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\BlendStates\alphaBlend.bs">
+      <Name>alphaBlend</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\BlendStates\nonPremultiplied.bs">
+      <Name>nonPremultiplied</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\BlendStates\opaque.bs">
+      <Name>opaque</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\DepthStencilStates\default.dss">
+      <Name>default</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\DepthStencilStates\depthRead.dss">
+      <Name>depthRead</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\RasterizerStates\cullCounterClock.rs">
+      <Name>cullCounterClock</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\RasterizerStates\cullNone.rs">
+      <Name>cullNone</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="Radgie\Graphics\RenderStates\SamplerStates\linearWrap.ss">
+      <Name>linearWrap</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Models\Asteroids\asteroid.png">
+      <Name>asteroid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Asteroid\apophis.png">
+      <Name>apophis</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Asteroid\bump.png">
+      <Name>bump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Asteroid\explosion.png">
+      <Name>explosion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Asteroid\fire.png">
+      <Name>fire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Asteroid\normal.png">
+      <Name>normal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Bonus\Bomb\bomb.png">
+      <Name>bomb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Bonus\Invincibility\invincibility.png">
+      <Name>invincibility</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Bonus\Life\life.png">
+      <Name>life</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Sounds\Bonus.wav">
+      <Name>Bonus</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Sounds\Collision.wav">
+      <Name>Collision</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Sounds\Fiuuu.wav">
+      <Name>Fiuuu</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Materials\Asteroid\spark_explosion.m">
+      <Name>spark_explosion</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Particles\spark_explosion.pss">
+      <Name>spark_explosion</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Asteroid\Graphics\Textures\Asteroid\spark.png">
+      <Name>spark</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Box\Graphics\Effects\box.fx">
+      <Name>box</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Box\Graphics\Materials\box.m">
+      <Name>box</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Box\Graphics\Textures\grid.png">
+      <Name>grid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\GUI\Graphics\Textures\bomb.png">
+      <Name>bomb</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\GUI\Graphics\Textures\empty.png">
+      <Name>empty</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\GUI\Graphics\Textures\gui_texture.png">
+      <Name>gui_texture</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\GUI\Graphics\Textures\life.png">
+      <Name>life</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\GUI\Graphics\Textures\shield.png">
+      <Name>shield</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Nebula\Graphics\Effects\nebula.fx">
+      <Name>nebula</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Nebula\Graphics\Materials\nebula.m">
+      <Name>nebula</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Nebula\Graphics\Textures\B1_nebula01.jpg">
+      <Name>B1_nebula01</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Nebula\Graphics\Textures\B1_nebula02.jpg">
+      <Name>B1_nebula02</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Skybox\Graphics\Textures\back.png">
+      <Name>back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Skybox\Graphics\Textures\bottom.png">
+      <Name>bottom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Skybox\Graphics\Textures\front.png">
+      <Name>front</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Skybox\Graphics\Textures\left.png">
+      <Name>left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Skybox\Graphics\Textures\right.png">
+      <Name>right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Skybox\Graphics\Textures\top.png">
+      <Name>top</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Spaceship\DeltaWing.xml">
+      <Name>DeltaWing</Name>
+      <Importer>XmlFileImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GameComponents\Spaceship\Graphics\Effects\Macros.fxh">
+      <Name>Macros</Name>
+    </None>
+    <Compile Include="GameComponents\Spaceship\Graphics\Effects\spaceship.fx">
+      <Name>spaceship</Name>
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+    </Compile>
+    <Compile Include="GameComponents\Spaceship\Graphics\Materials\engine.m">
+      <SubType>Designer</SubType>
+      <Name>engine</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Spaceship\Graphics\Materials\spaceship.m">
+      <SubType>Designer</SubType>
+      <Name>spaceship</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Spaceship\Graphics\Models\DeltaWing\Ship.fbx">
+      <Name>Ship</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="GameComponents\Spaceship\Graphics\Models\Icaro\SpaceShip0.fbx">
+      <Name>SpaceShip0</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+    </Compile>
+    <Compile Include="GameComponents\Spaceship\Graphics\Particles\Engine\engine.pss">
+      <SubType>Designer</SubType>
+      <Name>engine</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+    <Compile Include="GameComponents\Spaceship\Graphics\Particles\Engine\smallEngine.pss">
+      <SubType>Designer</SubType>
+      <Name>smallEngine</Name>
+      <Importer>XmlFileImporter</Importer>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Spaceship\Graphics\Models\DeltaWing\ShipDiffuse.tga">
+      <Name>ShipDiffuse</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Spaceship\Graphics\Models\Icaro\wedge_p2_diff_v1.tga">
+      <Name>wedge_p2_diff_v1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Spaceship\Graphics\Textures\engine.png">
+      <Name>engine</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameComponents\Spaceship\Icaro.xml">
+      <SubType>Designer</SubType>
+      <Name>Icaro</Name>
+      <Importer>XmlFileImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GameComponents\Spaceship\Sounds\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+  <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

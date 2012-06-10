@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Strings>
+  <!-- Main Menu -->
+  <String key="AsteroidsStorm" value="Asteroids Storm"/>
+  <String key="StartGame" value="Nueva partida"/>
+  <String key="Options" value="Opciones"/>
+  <String key="Exit" value="Salir"/>
+  <!-- Options Menu -->
+  <String key="Options" value="Opciones"/>
+  <String key="InvertAxes" value="Invertir Ejes"/>
+  <String key="True" value="Si"/>
+  <String key="False" value="No"/>
+  <String key="Volume" value="Volumen"/>
+  <String key="FXVolume" value="Volumen Efectos"/>
+  <String key="Return" value="Volver"/>
+  <!-- Select Ship -->
+  <String key="SelectYourShip" value="Escoge una nave"/>
+  <String key="Steer" value="Manejo"/>
+  <String key="Armor" value="Fuerza"/>
+  <!-- PreGame -->
+  <String key="PleaseWait" value="Por favor, espera"/>
+  <!-- Pause -->
+  <String key="Pause" value="Pausa"/>
+  <String key="Return" value="Volver"/>
+  <String key="Options" value="Opciones"/>
+  <String key="Exit" value="Salir"/>
+  <!-- End -->
+  <String key="GameOver" value="Fin del juego"/>
+  <String key="Message_1" value="Has conseguido"/>
+  <String key="Message_2" value=" puntos."/>
+  <String key="Message_3" value="Presiona cualquier tecla"/>
+  <String key="Message_4" value="para continuar."/>
+</Strings>

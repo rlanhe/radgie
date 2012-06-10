@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DepthStencilState>
+  <ReferenceStencil>0</ReferenceStencil>
+  <StencilWriteMask>-1</StencilWriteMask>
+  <StencilMask>-1</StencilMask>
+  <CounterClockwiseStencilDepthBufferFail>Keep</CounterClockwiseStencilDepthBufferFail>
+  <CounterClockwiseStencilFail>Keep</CounterClockwiseStencilFail>
+  <CounterClockwiseStencilPass>Keep</CounterClockwiseStencilPass>
+  <CounterClockwiseStencilFunction>Always</CounterClockwiseStencilFunction>
+  <TwoSidedStencilMode>false</TwoSidedStencilMode>
+  <StencilDepthBufferFail>Keep</StencilDepthBufferFail>
+  <StencilFail>Keep</StencilFail>
+  <StencilPass>Keep</StencilPass>
+  <StencilFunction>Always</StencilFunction>
+  <StencilEnable>false</StencilEnable>
+  <DepthBufferFunction>LessEqual</DepthBufferFunction>
+  <DepthBufferWriteEnable>false</DepthBufferWriteEnable>
+  <DepthBufferEnable>true</DepthBufferEnable>
+</DepthStencilState>

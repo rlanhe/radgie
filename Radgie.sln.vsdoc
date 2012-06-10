@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--   VSdocman config file for current project/solution.-->
+  <activeProfile>default</activeProfile>
+  <appSettings>
+    <add key="VBdocman_RadgieCore"><![CDATA[default]]></add>
+    <add key="VBdocman_RadgieContentPipelineExtensions"><![CDATA[default]]></add>
+    <add key="VBdocman_RadgieDevelopmentTestProject"><![CDATA[default]]></add>
+    <add key="VBdocman_RadgieDevelopmentTestProjectContent"><![CDATA[default]]></add>
+    <add key="VBdocman_ContentPipelineDebugger"><![CDATA[default]]></add>
+    <add key="VBdocman_AsteroidsStorm"><![CDATA[default]]></add>
+    <add key="VBdocman_AsteroidsStormContent"><![CDATA[default]]></add>
+    <add key="VBdocman_ParticleEditor"><![CDATA[default]]></add>
+    <add key="VBdocman_ParticleEditorContent"><![CDATA[default]]></add>
+    <add key="VBdocman_Xbox 360 Copy (3) of RadgieCore"><![CDATA[default]]></add>
+    <add key="VBdocman_Xbox 360 Copy of AsteroidsStorm"><![CDATA[default]]></add>
+    <add key="VBdocman_Tutorial"><![CDATA[default]]></add>
+    <add key="VBdocman_TutorialContent"><![CDATA[default]]></add>
+  </appSettings>
+</configuration>

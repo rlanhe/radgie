@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<log4net>
+
+  <appender name="DebugFileAppender" type="log4net.Appender.FileAppender">
+    <file value="Radgie.log" />
+    <appendToFile value="false" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger - %message%exception%newline" />
+    </layout>
+  </appender>
+
+  <root>
+    <level value="DEBUG"/>
+    <appender-ref ref="DebugFileAppender"/>
+  </root>
+
+</log4net>

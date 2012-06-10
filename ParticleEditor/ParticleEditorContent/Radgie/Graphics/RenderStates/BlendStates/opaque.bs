@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BlendState>
+  <MultiSampleMask>-1</MultiSampleMask>
+  <BlendFactor>
+    <R>255</R>
+    <G>255</G>
+    <B>255</B>
+    <A>255</A>
+    <!-- <PackedValue>4294967295</PackedValue> -->
+  </BlendFactor>
+  <ColorWriteChannels3>All</ColorWriteChannels3>
+  <ColorWriteChannels2>All</ColorWriteChannels2>
+  <ColorWriteChannels1>All</ColorWriteChannels1>
+  <ColorWriteChannels>All</ColorWriteChannels>
+  <AlphaBlendFunction>Add</AlphaBlendFunction>
+  <AlphaDestinationBlend>Zero</AlphaDestinationBlend>
+  <AlphaSourceBlend>One</AlphaSourceBlend>
+  <ColorBlendFunction>Add</ColorBlendFunction>
+  <ColorDestinationBlend>Zero</ColorDestinationBlend>
+  <ColorSourceBlend>One</ColorSourceBlend>
+</BlendState>

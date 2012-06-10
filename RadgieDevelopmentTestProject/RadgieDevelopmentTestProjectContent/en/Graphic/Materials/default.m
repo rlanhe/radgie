@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Material>
+  <RenderState>
+    <BlendState>en/Graphic/RenderStates/BlendState/opaque</BlendState>
+    <RasterizerState>en/Graphic/RenderStates/RasterizerState/cullCounterClock</RasterizerState>
+    <SamplerState>en/Graphic/RenderStates/SamplerState/linearWrap</SamplerState>
+    <DepthStencilState>en/Graphic/RenderStates/DepthStencilState/default</DepthStencilState>
+    <BlendFactor>
+      <Color>
+        <R>255</R>
+        <G>255</G>
+        <B>255</B>
+        <A>255</A>
+      </Color>
+    </BlendFactor>
+    <MultiSampleMask>-1</MultiSampleMask>
+    <ReferenceStencil>0</ReferenceStencil>
+  </RenderState>
+  <Effect>en/Effects/BasicEffect</Effect>
+  <EffectParameters>
+    <EffectParameter semantic="EmissiveColor">
+      <Color>
+        <R>255</R>
+        <G>255</G>
+        <B>255</B>
+        <A>255</A>
+      </Color>
+    </EffectParameter>
+  </EffectParameters>
+</Material>

@@ -1,0 +1,17 @@
+Content\log4net.xnb
+Content\radgieConfig.xnb
+Content\en\Graphic\Materials\default.xnb
+Content\en\Graphic\RenderStates\BlendState\opaque.xnb
+Content\en\Graphic\RenderStates\DepthStencilState\default.xnb
+Content\en\Graphic\RenderStates\RasterizerState\cullNone.xnb
+Content\en\Graphic\RenderStates\SamplerState\linearWrap.xnb
+Content\en\Graphic\RenderStates\RasterizerState\cullCounterClock.xnb
+Content\en\strings.xnb
+Content\en\Fonts\TestFont.xnb
+Content\en\Effects\BasicEffect.xnb
+Content\en\Graphic\Models\Tank\tank.xnb
+Content\en\Sound\Bip.xnb
+Content\en\Sound\Songs\Ambient.xnb
+Content\en\Graphic\Models\Tank\turret_alt_diff_tex_0.xnb
+Content\en\Graphic\Models\Tank\engine_diff_tex_0.xnb
+Content\en\Sound\Songs\Ambient.wma
