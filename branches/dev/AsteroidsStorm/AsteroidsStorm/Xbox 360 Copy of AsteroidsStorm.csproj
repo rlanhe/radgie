@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{93354ACD-221F-432D-8B13-072F10FCE7F0}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AsteroidsStorm</RootNamespace>
+    <AssemblyName>AsteroidsStorm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>4f154b7d-c468-43cb-a1ca-ca452c01c293</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="GameComponents\AsteroidsField\AAsteroidSectorState.cs" />
+    <Compile Include="GameComponents\AsteroidsField\AsteroidsField.cs" />
+    <Compile Include="GameComponents\AsteroidsField\MenuAsteroidSectorState.cs" />
+    <Compile Include="GameComponents\AsteroidsField\Random.cs" />
+    <Compile Include="GameComponents\Axes\Axes.cs" />
+    <Compile Include="GameComponents\Box\Box.cs" />
+    <Compile Include="GameComponents\ChaseCamera\ChaseCamera.cs" />
+    <Compile Include="GameComponents\FreeCamera\FreeCamera.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameComponents\FreeCamera\IFreeCameraInputController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameComponents\FreeCamera\States\FreeCameraController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameComponents\GUI\Bar.cs" />
+    <Compile Include="GameComponents\GUI\Image.cs" />
+    <Compile Include="GameComponents\GUI\IContainer.cs" />
+    <Compile Include="GameComponents\GUI\IWidget.cs" />
+    <Compile Include="GameComponents\GUI\Label.cs" />
+    <Compile Include="GameComponents\GUI\Frame.cs" />
+    <Compile Include="GameComponents\GUI\LayaoutUtil.cs" />
+    <Compile Include="GameComponents\SpaceObjects\ApophisController.cs" />
+    <Compile Include="GameComponents\SpaceObjects\AsteroidDestructionController.cs" />
+    <Compile Include="GameComponents\SpaceObjects\BonusDestructionController.cs" />
+    <Compile Include="GameComponents\SpaceObjects\SimpleSpaceObjectController.cs" />
+    <Compile Include="GameComponents\SpaceObjects\SpaceObject.cs" />
+    <Compile Include="GameComponents\Spaceship\States\BombState.cs" />
+    <Compile Include="GameComponents\Spaceship\States\SpaceshipDestructionController.cs" />
+    <Compile Include="RenderPasses\BloomPass.cs" />
+    <Compile Include="RenderPasses\BlurPass.cs" />
+    <Compile Include="States\AGameState.cs" />
+    <Compile Include="GameComponents\GUI\AWidget.cs" />
+    <Compile Include="States\Game\GameData.cs" />
+    <Compile Include="States\Game\PlayerState.cs" />
+    <Compile Include="States\Game\States\PreGame.cs" />
+    <Compile Include="States\IGUIController.cs" />
+    <Compile Include="GameComponents\Skybox\Skybox.cs" />
+    <Compile Include="GameComponents\Spaceship\ISpaceshipController.cs" />
+    <Compile Include="GameComponents\Spaceship\Spaceship.cs" />
+    <Compile Include="GameComponents\Spaceship\States\ASpaceshipState.cs" />
+    <Compile Include="GameComponents\Spaceship\States\FinalState.cs" />
+    <Compile Include="GameComponents\Spaceship\States\InvincibilityState.cs" />
+    <Compile Include="GameComponents\Spaceship\States\RecieveHitState.cs" />
+    <Compile Include="GameComponents\Spaceship\States\DefaultState.cs" />
+    <Compile Include="GameComponents\Spaceship\States\ISpaceshipState.cs" />
+    <Compile Include="GameComponents\Spaceship\States\SpaceshipMovementController.cs" />
+    <Compile Include="GameComponents\Spaceship\States\SpaceshipStateMachine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="States\Game\GameController.cs" />
+    <Compile Include="States\Game\GameStateMachine.cs" />
+    <Compile Include="States\Game\States\End.cs" />
+    <Compile Include="States\Game\States\Game.cs" />
+    <Compile Include="States\Game\States\Pause.cs" />
+    <Compile Include="States\GUIController.cs" />
+    <Compile Include="States\MainStateMachine.cs" />
+    <Compile Include="States\Menu\Intro.cs" />
+    <Compile Include="States\Menu\MainMenu.cs" />
+    <Compile Include="States\Menu\Menu.cs" />
+    <Compile Include="States\Menu\Options.cs" />
+    <Compile Include="States\Menu\SelectShip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Radgie\Xbox 360 Copy (3) of RadgieCore.csproj">
+      <Project>{46c391d5-cbc8-4e98-86c6-6249bada9c0d}</Project>
+      <Name>Xbox 360 Copy (3) of RadgieCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AsteroidsStormContent\AsteroidsStormContent.contentproj">
+      <Name>AsteroidsStormContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{2CA7B590-F681-4EE1-9094-D1FE7B3A25F4}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 4.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AsteroidsStorm_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>

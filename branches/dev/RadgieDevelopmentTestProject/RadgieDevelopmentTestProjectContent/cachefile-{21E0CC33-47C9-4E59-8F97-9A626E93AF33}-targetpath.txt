@@ -1,0 +1,15 @@
+Content\log4net.xnb
+Content\radgieConfig.xnb
+Content\Fonts\TestFont.xnb
+Content\Effects\BasicEffect.xnb
+Content\Graphic\Materials\default.xnb
+Content\Graphic\RenderStates\BlendState\opaque.xnb
+Content\Graphic\RenderStates\DepthStencilState\default.xnb
+Content\Graphic\RenderStates\RasterizerState\cullNone.xnb
+Content\Graphic\RenderStates\SamplerState\linearWrap.xnb
+Content\Graphic\Models\Tank\engine_diff_tex.xnb
+Content\Graphic\Models\Tank\turret_alt_diff_tex.xnb
+Content\Graphic\Models\Tank\tank.xnb
+Content\Graphic\Materials\default_0.xnb
+Content\Graphic\Models\Tank\turret_alt_diff_tex_0.xnb
+Content\Graphic\Models\Tank\engine_diff_tex_0.xnb

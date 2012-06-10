@@ -1,0 +1,238 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Radgie.State;
+using Radgie.Sound;
+using Radgie.Util;
+using Radgie.Graphics.Entity;
+using Radgie.Graphics;
+using Microsoft.Xna.Framework;
+using Radgie.Util.Collection.Pool;
+using AsteroidsStorm.States.Game;
+
+namespace AsteroidsStorm.GameComponents.SpaceObjects
+{
+    /// <summary>
+    /// Controlador de la destruccion del asteroide.
+    /// </summary>
+    class AsteroidDestructionController:AState
+    {
+        /// <summary>
+        /// Informacion sobre los sistemas de particulas.
+        /// </summary>
+        protected struct ParticleSystemElements
+        {
+            /// <summary>
+            /// Sistema de particulas.
+            /// </summary>
+            public ParticleSystem ps;
+            /// <summary>
+            /// Emisor de particulas.
+            /// </summary>
+            public ParticleEmitter pe;
+
+            /// <summary>
+            /// Inicializa la estructura.
+            /// </summary>
+            /// <param name="ps">Sistema de particulas.</param>
+            /// <param name="pe">Emisor de particulas.</param>
+            public ParticleSystemElements(ParticleSystem ps, ParticleEmitter pe)
+            {
+                this.ps = ps;
+                this.pe = pe;
+            }
+        }
+
+        private BackCounter mAsteroidBackCounter;
+        private BackCounter mParticlesBackCounter;
+        private BackCounter mSparkParticlesBackCounter;
+
+        private static ParticleSystemSettings mParticleSettings = Radgie.Core.RadgieGame.Instance.ResourceManager.Load<ParticleSystemSettings>("GameComponents/Asteroid/Graphics/Particles/explosion", false);
+        private static ParticleSystemSettings mSparkParticleSettings = Radgie.Core.RadgieGame.Instance.ResourceManager.Load<ParticleSystemSettings>("GameComponents/Asteroid/Graphics/Particles/spark_explosion", false);
+
+        private static Pool<ParticleSystemElements> mParticleSystemsPool = new Pool<ParticleSystemElements>(20, true, 3, InitParticleSystem);
+        private static Pool<SoundEffect> mCollisionEfectPool = new Pool<SoundEffect>(20, true, 3, InitCollisionSound);
+        private static Pool<ParticleSystemElements> mSparkParticleSystemsPool = new Pool<ParticleSystemElements>(20, true, 3, InitSparkParticleSystem);
+
+        /// <summary>
+        /// Efecto de sonido al explotar.
+        /// </summary>
+        protected SoundEffect mSoundEffect;
+        /// <summary>
+        /// Sistema de particulas de la explosion.
+        /// </summary>
+        protected ParticleSystemElements mParticleSystem;
+        /// <summary>
+        /// Sistema de particulas de la explosion secundaria.
+        /// </summary>
+        protected ParticleSystemElements mSparkParticleSystem;
+        
+        /// <summary>
+        /// Constructor por defecto.
+        /// </summary>
+        public AsteroidDestructionController()
+            : base(null)
+        {
+            mAsteroidBackCounter = new BackCounter(TimeSpan.FromSeconds(0));
+            mParticlesBackCounter = new BackCounter(mParticleSettings.Duration);
+            mSparkParticlesBackCounter = new BackCounter(mSparkParticleSettings.Duration);
+        }
+
+        /// <summary>
+        /// Inicializa el sistema de particulas de la explosion.
+        /// </summary>
+        /// <returns>Sistema de particulas.</returns>
+        private static ParticleSystemElements InitParticleSystem()
+        {
+            ParticleSystem ps = new ParticleSystem(mParticleSettings);
+            ParticleEmitter psEmitter = new ParticleEmitter(ps, 600.0f, Vector3.Zero);
+            return new ParticleSystemElements(ps, psEmitter);
+        }
+
+        /// <summary>
+        /// Inicializa el sistema de particulas de la explosion secundaria.
+        /// </summary>
+        /// <returns>Sistema de particulas.</returns>
+        private static ParticleSystemElements InitSparkParticleSystem()
+        {
+            ParticleSystem ps = new ParticleSystem(mSparkParticleSettings);
+            ParticleEmitter psEmitter = new ParticleEmitter(ps, 600.0f, Vector3.Zero);
+            return new ParticleSystemElements(ps, psEmitter);
+        }
+
+        /// <summary>
+        /// Inicializa el sonido de la colision.
+        /// </summary>
+        /// <returns>Efecto de sonido.</returns>
+        private static SoundEffect InitCollisionSound()
+        {
+            SoundEffect soundEffect = new SoundEffect("GameComponents/Asteroid/Sounds/collision");
+            soundEffect.IsLooped = false;
+            return soundEffect;
+        }
+
+        /// <summary>
+        /// Ver <see cref="Radgie.State.IState.OnEntry"/>
+        /// </summary>
+        public override void OnEntry()
+        {
+            base.OnEntry();
+
+            GameData gData = GetFromContext<GameData>("GameData");
+            gData.AsteroidsField.CollisionGroup.RemoveGameComponent(Owner.Component);
+
+            // Sonido colision
+            mSoundEffect = mCollisionEfectPool.Get();
+            if (mSoundEffect != null)
+            {
+                Owner.Component.AddGameObject(mSoundEffect);
+                mSoundEffect.Play();
+            }
+
+            // Timers
+            mAsteroidBackCounter.Start();
+            mParticlesBackCounter.Start();
+            mSparkParticlesBackCounter.Start();
+
+            // Explosion
+            mParticleSystem = mParticleSystemsPool.Get();
+            if (mParticleSystem.ps != null)
+            {
+                mParticleSystem.ps.Reset();
+                Owner.Component.AddGameObject(mParticleSystem.ps);
+                Owner.Component.AddGameObject(mParticleSystem.pe);
+            }
+
+            // Explosion 2
+            mSparkParticleSystem = mSparkParticleSystemsPool.Get();
+            if (mSparkParticleSystem.ps != null)
+            {
+                mSparkParticleSystem.ps.Reset();
+                Owner.Component.AddGameObject(mSparkParticleSystem.ps);
+                Owner.Component.AddGameObject(mSparkParticleSystem.pe);
+            }
+        }
+
+        /// <summary>
+        /// Ver <see cref="Radgie.Core.IUpdateable.Update"/>
+        /// </summary>
+        public override void Update(Microsoft.Xna.Framework.GameTime time)
+        {
+            base.Update(time);
+
+            // Desactiva la creacion de sparks
+            if ((mSparkParticlesBackCounter.Finished()) && (mSparkParticleSystem.ps != null))
+            {
+                Owner.Component.RemoveGameObject(mSparkParticleSystem.ps);
+                Owner.Component.RemoveGameObject(mSparkParticleSystem.pe);
+                mParticleSystemsPool.Release(mSparkParticleSystem);
+                mSparkParticleSystem.pe = null;
+                mSparkParticleSystem.ps = null;
+            }
+
+            // Pasados n segundos, oculta asteroide
+            if (mAsteroidBackCounter.Finished())
+            {
+                SpaceObject sObject = (SpaceObject)Owner.Component;
+                sObject.HideAsteroid();
+            }
+
+            // Elimina el asteroide
+            if (mParticlesBackCounter.Finished())
+            {
+                if (mSoundEffect != null)
+                {
+                    Owner.Component.RemoveGameObject(mSoundEffect);
+                    mCollisionEfectPool.Release(mSoundEffect);
+                    mSoundEffect = null;
+                }
+
+                if (mParticleSystem.ps != null)
+                {
+                    Owner.Component.RemoveGameObject(mParticleSystem.ps);
+                    Owner.Component.RemoveGameObject(mParticleSystem.pe);
+                    mParticleSystemsPool.Release(mParticleSystem);
+                    mParticleSystem.pe = null;
+                    mParticleSystem.ps = null;
+                }
+                
+                SpaceObject sObject = (SpaceObject)Owner.Component;
+                sObject.Reset();
+            }
+        }
+
+        /// <summary>
+        /// Ver <see cref="Radgie.IState.OnExit"/>
+        /// </summary>
+        public override void OnExit()
+        {
+            base.OnExit();
+
+            if (mSoundEffect != null)
+            {
+                Owner.Component.RemoveGameObject(mSoundEffect);
+                mCollisionEfectPool.Release(mSoundEffect);
+                mSoundEffect = null;
+            }
+
+            if (mParticleSystem.ps != null)
+            {
+                Owner.Component.RemoveGameObject(mParticleSystem.ps);
+                Owner.Component.RemoveGameObject(mParticleSystem.pe);
+                mParticleSystemsPool.Release(mParticleSystem);
+                mParticleSystem.pe = null;
+                mParticleSystem.ps = null;
+            }
+
+            if (mSparkParticleSystem.ps != null)
+            {
+                Owner.Component.RemoveGameObject(mSparkParticleSystem.ps);
+                Owner.Component.RemoveGameObject(mSparkParticleSystem.pe);
+                mParticleSystemsPool.Release(mSparkParticleSystem);
+                mSparkParticleSystem.pe = null;
+                mSparkParticleSystem.ps = null;
+            }
+        }
+    }
+}

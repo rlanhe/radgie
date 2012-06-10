@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<radgie>
+
+  <parameters>
+    <!-- <parameter name="" value=""/> -->
+  </parameters>
+
+  <systems>
+
+
+    <!-- State System -->
+    <system type="Radgie.State.IStateSystem" implementation="Radgie.State.StateSystem">
+      <parameters>
+        <parameter name="rate" value="60"/>
+        <parameter name="GameState" value="ParticleEditor.States.MainStateMachine, ParticleEditor"/>
+      </parameters>
+    </system>
+
+    <!-- Scene System -->
+    <system type="Radgie.Scene.ISceneSystem" implementation="Radgie.Scene.SceneSystem">
+      <parameters>
+        <parameter name="rate" value="60"/>
+      </parameters>
+    </system>
+
+    <!-- Graphic System -->
+    <system type="Radgie.Graphics.IGraphicSystem" implementation="Radgie.Graphics.GraphicSystem">
+      <parameters>
+        <parameter name="rate" value="60"/>
+        <parameter name="backbufferWidth" value="720"/>
+        <parameter name="backbufferHeight" value="480"/>
+      </parameters>
+    </system>
+
+  </systems>
+</radgie>
