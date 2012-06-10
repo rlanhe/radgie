@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Microsoft.Xna.Framework;
+using AsteroidsStorm.States.Game;
+using Radgie.Core.Collision;
+
+namespace AsteroidsStorm.GameComponents.SpaceObjects
+{
+    /// <summary>
+    /// Controlador del asteroide apophis.
+    /// </summary>
+    class ApophisController: SimpleSpaceObjectController
+    {
+        private const float IMPACT_DIRECTION_WEIGHT = 0.65f;
+        private static List<CollisionRecord> mResults;
+
+        /// <summary>
+        /// Constructor estatico.
+        /// </summary>
+        static ApophisController()
+        {
+            mResults = new List<CollisionRecord>();
+        }
+
+        /// <summary>
+        /// Constructor por defecto.
+        /// </summary>
+        public ApophisController()
+        {
+        }
+
+        /// <summary>
+        /// Ver <see cref="Radgie.Core.IUpdateable.Update"/>
+        /// </summary>
+        public override void Update(Microsoft.Xna.Framework.GameTime time)
+        {
+            base.Update(time);
+
+            // Trata de acercarse a la posicion de la nave
+            GameData gameData = GetFromContext<GameData>("GameData");
+            if (gameData != null)
+            {
+                Radgie.Core.IGameComponent ship = gameData.PlayerState.Spaceship;
+                Vector3 lastAsteroidPosition = Owner.Component.Transformation.Translation;
+                Vector3 impactDirection = ship.World.Translation - Owner.Component.World.Translation;
+                impactDirection.Z = 0.0f;
+                
+                float distance = impactDirection.Length();
+                if ((distance < 3.0f) || (gameData.PlayerState.Energy == 0.0f))
+                {
+                    float finalLinearVelocity = (float)(gameData.PlayerState.Spaceship.Speed * time.ElapsedGameTime.TotalSeconds * IMPACT_DIRECTION_WEIGHT);
+
+                    float velocity = distance < finalLinearVelocity ? distance : finalLinearVelocity;
+                    impactDirection.Normalize();
+
+                    Owner.Component.Transformation.Translation += impactDirection * finalLinearVelocity * velocity;
+                    Owner.Component.Update(null);
+
+                    gameData.AsteroidsField.GetCollisions(Owner.Component, mResults);
+
+                    foreach (CollisionRecord cRecord in mResults)
+                    {
+                        if ((cRecord.GameComponentA is SpaceObject) && (cRecord.GameComponentB is SpaceObject))
+                        {
+                            Owner.Component.Transformation.Translation = lastAsteroidPosition;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

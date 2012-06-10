@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{46C391D5-CBC8-4E98-86C6-6249BADA9C0D}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Radgie</RootNamespace>
+    <AssemblyName>Radgie</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>088ab158-8c46-4cf2-8eba-54486db9bde5</XnaCrossPlatformGroupID>
+    <XnaOutputType>Library</XnaOutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Core\BoundingVolumes\ABoundingVolume.cs" />
+    <Compile Include="Core\BoundingVolumes\BoundingBox.cs" />
+    <Compile Include="Core\BoundingVolumes\BoundingFrustum.cs" />
+    <Compile Include="Core\BoundingVolumes\BoundingSphere.cs" />
+    <Compile Include="Core\Collision\CollisionGroup.cs" />
+    <Compile Include="Core\ISceneNode.cs" />
+    <Compile Include="Core\ParametrizedJob.cs" />
+    <Compile Include="Core\RadgieStatistics.cs" />
+    <Compile Include="Core\Job.cs" />
+    <Compile Include="Core\JobScheduler.cs" />
+    <Compile Include="Core\SystemStatistics.cs" />
+    <Compile Include="File\ParticleSystemSettingsFileReader.cs" />
+    <Compile Include="Graphics\EntityInstancesRenderer.cs" />
+    <Compile Include="Graphics\Entity\Geometry.cs" />
+    <Compile Include="Core\Collision\CollisionRecord.cs" />
+    <Compile Include="Core\Collision\ICollisionGroup.cs" />
+    <Compile Include="Graphics\Entity\Light.cs" />
+    <Compile Include="Graphics\Entity\ParticleEmitter.cs" />
+    <Compile Include="Graphics\Entity\ParticleSystem.cs" />
+    <Compile Include="Graphics\GraphicsSystemStatistics.cs" />
+    <Compile Include="Graphics\IDrawable.cs" />
+    <Compile Include="Graphics\IEntityInstancesRenderer.cs" />
+    <Compile Include="Graphics\ILight.cs" />
+    <Compile Include="Graphics\ParticlesBuffer.cs" />
+    <Compile Include="Graphics\ParticleSystemSettings.cs" />
+    <Compile Include="Graphics\ParticleVertex.cs" />
+    <Compile Include="Graphics\RenderPass\FullScreenQuadPass.cs" />
+    <Compile Include="Graphics\RenderPass\MultipleRenderPass2.cs" />
+    <Compile Include="Graphics\RenderPass\MultipleRenderPass.cs" />
+    <Compile Include="Graphics\RenderPass\MultipleTexturesRenderPass.cs" />
+    <Compile Include="Graphics\RenderPass\TextureRenderPass.cs" />
+    <Compile Include="Input\Adapters\Analogical2AnalogicalInverterAdapter.cs" />
+    <Compile Include="Input\Adapters\DigitalOneShotWithDelayAndRepetitionAdapter.cs" />
+    <Compile Include="Input\InputSystemStatistics.cs" />
+    <Compile Include="Scene\Managers\Octree\OctreeScene.cs" />
+    <Compile Include="Scene\Managers\Octree\OctreeSceneNode.cs" />
+    <Compile Include="Scene\SceneSystemStatistics.cs" />
+    <Compile Include="Sound\SoundSystemStatistics.cs" />
+    <Compile Include="State\StateSystemStatistics.cs" />
+    <Compile Include="Util\BoundingUtil.cs" />
+    <Compile Include="Core\BoundingVolumes\CompositeBoundingVolume.cs" />
+    <Compile Include="Core\BoundingVolumes\IBoundingVolume.cs" />
+    <Compile Include="Core\BoundingVolumes\Plane.cs" />
+    <Compile Include="Core\BoundingVolumes\Point.cs" />
+    <Compile Include="Core\BoundingVolumes\Ray.cs" />
+    <Compile Include="Core\GameComponent.cs" />
+    <Compile Include="Core\IActivable.cs" />
+    <Compile Include="Core\AEntity.cs" />
+    <Compile Include="Core\AGameObject.cs" />
+    <Compile Include="Core\AInstance.cs" />
+    <Compile Include="Core\ASystem.cs" />
+    <Compile Include="Core\AUpdateableAtRate.cs" />
+    <Compile Include="Core\IDebugObject.cs" />
+    <Compile Include="Core\IEntity.cs" />
+    <Compile Include="Core\IGameComponent.cs" />
+    <Compile Include="Core\IGameComponentObserver.cs" />
+    <Compile Include="Core\IGameObject.cs" />
+    <Compile Include="Core\IHasContext.cs" />
+    <Compile Include="Core\IIdentifiable.cs" />
+    <Compile Include="Core\IInstance.cs" />
+    <Compile Include="Core\IScene.cs" />
+    <Compile Include="Core\ISystem.cs" />
+    <Compile Include="Core\IUpdateable.cs" />
+    <Compile Include="Core\RadgieGameConfiguration.cs" />
+    <Compile Include="Core\ResourceManager.cs" />
+    <Compile Include="Core\Transformation.cs" />
+    <Compile Include="File\StringsFile.cs" />
+    <Compile Include="Graphics\Entity\BoundingVolume.cs" />
+    <Compile Include="Input\Adapters\Digitals2AnalogicalAdapter.cs" />
+    <Compile Include="State\AStateEntity.cs" />
+    <Compile Include="State\Behaviour.cs" />
+    <Compile Include="State\IStateEntity.cs" />
+    <Compile Include="Util\BackCounter.cs" />
+    <Compile Include="File\DepthStencilStateFileReader.cs" />
+    <Compile Include="File\RasterizerStateFileReader.cs" />
+    <Compile Include="File\SamplerStateFileReader.cs" />
+    <Compile Include="File\MaterialFileReader.cs" />
+    <Compile Include="File\BlendStateFileReader.cs" />
+    <Compile Include="File\XmlFile.cs" />
+    <Compile Include="File\XmlFileReader.cs" />
+    <Compile Include="Graphics\Camera\Camera2D.cs" />
+    <Compile Include="Graphics\Camera\Camera3D.cs" />
+    <Compile Include="Graphics\Camera\CameraParameters.cs" />
+    <Compile Include="Graphics\Camera\ICamera.cs" />
+    <Compile Include="Graphics\Camera\ICamera2D.cs" />
+    <Compile Include="Graphics\Camera\ICamera3D.cs" />
+    <Compile Include="Graphics\Entity\AGraphicEntity.cs" />
+    <Compile Include="Graphics\Entity\ASimpleGraphicEntity.cs" />
+    <Compile Include="Graphics\Entity\SimpleModel.cs" />
+    <Compile Include="Graphics\Entity\Sprite.cs" />
+    <Compile Include="Graphics\Entity\Text.cs" />
+    <Compile Include="Graphics\RenderPass\SceneRenderPass.cs" />
+    <Compile Include="Graphics\StaticGeometry.cs" />
+    <Compile Include="Graphics\GraphicSystem.cs" />
+    <Compile Include="Graphics\IDraw.cs" />
+    <Compile Include="Graphics\IGraphicEntity.cs" />
+    <Compile Include="Graphics\IGraphicInstance.cs" />
+    <Compile Include="Graphics\IGraphicSystem.cs" />
+    <Compile Include="Graphics\Instance\SimpleGraphicInstance.cs" />
+    <Compile Include="Graphics\IRenderable.cs" />
+    <Compile Include="Graphics\ARenderPass.cs" />
+    <Compile Include="Graphics\IRenderer.cs" />
+    <Compile Include="Graphics\Material.cs" />
+    <Compile Include="Graphics\MaterialParameter.cs" />
+    <Compile Include="Graphics\Mesh.cs" />
+    <Compile Include="Graphics\Quad.cs" />
+    <Compile Include="Graphics\Renderer.cs" />
+    <Compile Include="Graphics\RenderState.cs" />
+    <Compile Include="Input\Action\AnalogicalAction.cs" />
+    <Compile Include="Input\Action\PositionAction.cs" />
+    <Compile Include="Input\Adapters\Analogical2DigitalAdapter.cs" />
+    <Compile Include="Input\Adapters\AnalogicalDirectionControl2AnalogicalAdapter.cs" />
+    <Compile Include="Input\Adapters\Analogical2AnalogicalAdapter.cs" />
+    <Compile Include="Input\Adapters\Digital2AnalogicalAdapter.cs" />
+    <Compile Include="Input\Adapters\IncrementalAnalogicalAdpater.cs" />
+    <Compile Include="Input\Adapters\DigitalOneShotAdapter.cs" />
+    <Compile Include="Input\ADevice.cs" />
+    <Compile Include="Input\Action\AAction.cs" />
+    <Compile Include="Input\Control\IAnalogicalDirectionControl.cs" />
+    <Compile Include="Input\Action\DigitalAction.cs" />
+    <Compile Include="Input\Control\IAnalogicalControl.cs" />
+    <Compile Include="Input\Control\IControl.cs" />
+    <Compile Include="Input\Control\IDigitalControl.cs" />
+    <Compile Include="Input\Control\IPositionControl.cs" />
+    <Compile Include="Input\ADeviceControl.cs" />
+    <Compile Include="Input\Control\IScrollControl.cs" />
+    <Compile Include="Input\Device\Gamepad\GamepadThumb.cs" />
+    <Compile Include="Input\Device\Gamepad\GamepadDPad.cs" />
+    <Compile Include="Input\Device\Gamepad\GamepadTrigger.cs" />
+    <Compile Include="Input\Device\Gamepad\Gamepad.cs" />
+    <Compile Include="Input\Device\Gamepad\GamepadButton.cs" />
+    <Compile Include="Input\Device\Gamepad\IGamepad.cs" />
+    <Compile Include="Input\Device\Keyboard\IKeyboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\Device\Keyboard\Keyboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\Device\Keyboard\KeyboardKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\Device\Mouse\IMouse.cs" />
+    <Compile Include="Input\Device\Mouse\Mouse.cs" />
+    <Compile Include="Input\Device\Mouse\MouseButton.cs" />
+    <Compile Include="Input\Device\Mouse\MousePosition.cs" />
+    <Compile Include="Input\Device\Mouse\MouseWheel.cs" />
+    <Compile Include="Input\IDevice.cs" />
+    <Compile Include="Input\IInputSystem.cs" />
+    <Compile Include="Input\InputSystem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\RadgieGame.cs" />
+    <Compile Include="Scene\AScene.cs" />
+    <Compile Include="Scene\ASceneNode.cs" />
+    <Compile Include="Scene\IComplexSceneNode.cs" />
+    <Compile Include="Scene\ISceneSystem.cs" />
+    <Compile Include="Scene\Managers\Simple\SimpleScene.cs" />
+    <Compile Include="Scene\Managers\Simple\SimpleSceneNode.cs" />
+    <Compile Include="Scene\SceneSystem.cs" />
+    <Compile Include="Sound\ASoundEntity.cs" />
+    <Compile Include="Sound\ISoundEntity.cs" />
+    <Compile Include="Sound\ISoundSystem.cs" />
+    <Compile Include="Sound\SoundEffect.cs" />
+    <Compile Include="Sound\SoundSystem.cs" />
+    <Compile Include="State\AStateMachine.cs" />
+    <Compile Include="State\AState.cs" />
+    <Compile Include="State\Event.cs" />
+    <Compile Include="State\IState.cs" />
+    <Compile Include="State\IStateMachine.cs" />
+    <Compile Include="State\IStateSystem.cs" />
+    <Compile Include="State\StateSystem.cs" />
+    <Compile Include="Util\Collection\Context\Context.cs" />
+    <Compile Include="Util\Collection\Context\IContext.cs" />
+    <Compile Include="Util\Collection\Context\Variable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Collection\ObserverList\ObserverList.cs" />
+    <Compile Include="Util\Collection\Pool\Pool.cs" />
+    <Compile Include="Util\Collection\ReferencePool\IReferencePool.cs" />
+    <Compile Include="Util\Collection\ReferencePool\ReferencePool.cs" />
+    <Compile Include="Util\DebugSceneUtil.cs" />
+    <Compile Include="Util\Debug\DebugConsole.cs" />
+    <Compile Include="Util\MathUtil.cs" />
+    <Compile Include="Util\PathUtil.cs" />
+    <Compile Include="Util\Timer.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Serialization, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>

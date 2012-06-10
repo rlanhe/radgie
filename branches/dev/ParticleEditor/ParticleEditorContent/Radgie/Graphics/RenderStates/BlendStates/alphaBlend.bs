@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BlendState>
+  <MultiSampleMask>-1</MultiSampleMask>
+  <ColorWriteChannels3>All</ColorWriteChannels3>
+  <ColorWriteChannels2>All</ColorWriteChannels2>
+  <ColorWriteChannels1>All</ColorWriteChannels1>
+  <ColorWriteChannels>All</ColorWriteChannels>
+  <AlphaBlendFunction>Add</AlphaBlendFunction>
+  <AlphaDestinationBlend>InverseSourceAlpha</AlphaDestinationBlend>
+  <AlphaSourceBlend>One</AlphaSourceBlend>
+  <ColorBlendFunction>Add</ColorBlendFunction>
+  <ColorDestinationBlend>InverseSourceAlpha</ColorDestinationBlend>
+  <ColorSourceBlend>BlendFactor</ColorSourceBlend>
+</BlendState>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ParticleSystemSettings>
+  <MaxParticles>100</MaxParticles>
+  <Duration>0.00:00:02.00</Duration>
+  <DurationRandomness>3</DurationRandomness>
+  <EmitterVelocitySensitivity>1</EmitterVelocitySensitivity>
+  <MinHorizontalVelocity>-2</MinHorizontalVelocity>
+  <MaxHorizontalVelocity>2</MaxHorizontalVelocity>
+  <MinVerticalVelocity>-2</MinVerticalVelocity>
+  <MaxVerticalVelocity>2</MaxVerticalVelocity>
+  <Gravity>
+    <Vector3>
+      <X>0</X>
+      <Y>0</Y>
+      <Z>0</Z>
+    </Vector3>
+  </Gravity>
+  <EndVelocity>0</EndVelocity>
+  <MinColor>
+    <Color>
+      <R>169</R>
+      <G>169</G>
+      <B>169</B>
+      <A>255</A>
+    </Color>
+  </MinColor>
+  <MaxColor>
+    <Color>
+      <R>128</R>
+      <G>128</G>
+      <B>128</B>
+      <A>255</A>
+    </Color>
+  </MaxColor>
+  <MinRotateSpeed>-1</MinRotateSpeed>
+  <MaxRotateSpeed>1</MaxRotateSpeed>
+  <MinStartSize>0.3</MinStartSize>
+  <MaxStartSize>0.3</MaxStartSize>
+  <MinEndSize>5</MinEndSize>
+  <MaxEndSize>7</MaxEndSize>
+  <Material>
+    <Relative>../Materials/Asteroid/explosion</Relative>
+  </Material>
+</ParticleSystemSettings>

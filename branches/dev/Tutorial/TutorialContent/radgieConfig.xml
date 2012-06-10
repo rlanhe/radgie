@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<radgie>
+  
+  <systems>
+
+    <!-- Scene System -->
+    <system type="Radgie.Scene.ISceneSystem" implementation="Radgie.Scene.SceneSystem">
+      <parameters>
+        <parameter name="rate" value="60"/>
+      </parameters>
+    </system>
+    
+    <!-- Graphic System -->
+    <system type="Radgie.Graphics.IGraphicSystem" implementation="Radgie.Graphics.GraphicSystem">
+      <parameters>
+        <parameter name="rate" value="60"/>
+      </parameters>
+    </system>
+
+    <!-- Input System -->
+    <system type="Radgie.Input.IInputSystem" implementation="Radgie.Input.InputSystem">
+      <devices>
+        <device name="Keyboard" implementation="Radgie.Input.Device.Keyboard.Keyboard"/>
+      </devices>
+      <parameters>
+        <parameter name="rate" value="60"/>
+      </parameters>
+    </system>
+
+    <!-- State System -->
+    <system type="Radgie.State.IStateSystem" implementation="Radgie.State.StateSystem">
+      <parameters>
+        <parameter name="rate" value="60"/>
+        <parameter name="GameState" value="Tutorial.TutorialStateMachine, Tutorial"/>
+      </parameters>
+    </system>
+
+    <!-- Sound System -->
+    <system type="Radgie.Sound.ISoundSystem" implementation="Radgie.Sound.SoundSystem">
+      <parameters>
+        <parameter name="rate" value="60"/>
+      </parameters>
+    </system>
+
+  </systems>
+</radgie>

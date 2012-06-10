@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Spaceship>
+  <Model>
+    <Relative>Graphics/Models/DeltaWing/Ship</Relative>
+  </Model>
+  <Center>
+    <Vector3>
+      <X>0.0</X>
+      <Y>0.2</Y>
+      <Z>0.0</Z>
+    </Vector3>
+  </Center>
+  <!-- <Scale>0.0007</Scale> -->
+  <Scale>0.0007</Scale>
+  <Life>100</Life>
+  <Steer>20</Steer>
+  <Armor>1</Armor>
+  <ParticleSystem>
+    <Settings>
+      <Relative>Graphics/Particles/Engine/engine</Relative>
+    </Settings>
+    <Position>
+      <Vector3>
+        <X>0</X>
+        <Y>0.21</Y>
+        <Z>-0.35</Z>
+      </Vector3>
+    </Position>
+    <Emitter>
+      <Position>
+        <Vector3>
+          <X>1</X>
+          <Y>0</Y>
+          <Z>0</Z>
+        </Vector3>
+      </Position>
+      <Speed>400</Speed>
+    </Emitter>
+  </ParticleSystem>
+</Spaceship>

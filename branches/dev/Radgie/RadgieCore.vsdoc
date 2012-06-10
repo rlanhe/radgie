@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--   VSdocman config file for current project/solution.-->
+  <activeProfile>default</activeProfile>
+  <appSettings>
+    <add key="VBdocman_regexFilters"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<filters />]]></add>
+    <add key="VBdocman_comNonCommented"><![CDATA[0]]></add>
+    <add key="VBdocman_comPublic"><![CDATA[-1]]></add>
+    <add key="VBdocman_comPrivate"><![CDATA[0]]></add>
+    <add key="VBdocman_comFriend"><![CDATA[0]]></add>
+    <add key="VBdocman_comProtected"><![CDATA[0]]></add>
+    <add key="VBdocman_comProtectedFriend"><![CDATA[0]]></add>
+    <add key="VBdocman_comMethod"><![CDATA[-1]]></add>
+    <add key="VBdocman_comStdModule"><![CDATA[0]]></add>
+    <add key="VBdocman_comObject"><![CDATA[-1]]></add>
+    <add key="VBdocman_comForm"><![CDATA[0]]></add>
+    <add key="VBdocman_comProperty"><![CDATA[-1]]></add>
+    <add key="VBdocman_comEvent"><![CDATA[-1]]></add>
+    <add key="VBdocman_comVariable"><![CDATA[-1]]></add>
+    <add key="VBdocman_comConstant"><![CDATA[-1]]></add>
+    <add key="VBdocman_comEnumeration"><![CDATA[-1]]></add>
+    <add key="VBdocman_comStructure"><![CDATA[-1]]></add>
+    <add key="VBdocman_comDelegate"><![CDATA[-1]]></add>
+    <add key="VBdocman_comInterface"><![CDATA[-1]]></add>
+    <add key="VBdocman_comAttribute"><![CDATA[0]]></add>
+    <add key="VBdocman_comEventDecl"><![CDATA[0]]></add>
+    <add key="VBdocman_comDeclare"><![CDATA[0]]></add>
+    <add key="VBdocman_comContextID"><![CDATA[0]]></add>
+    <add key="VBdocman_comWriteDescription"><![CDATA[-1]]></add>
+    <add key="VBdocman_useConditionalCompilation"><![CDATA[0]]></add>
+    <add key="VBdocman_conditionalConstants"><![CDATA[]]></add>
+    <add key="VBdocman_showFormsSeparate"><![CDATA[0]]></add>
+    <add key="VBdocman_showInherited"><![CDATA[-1]]></add>
+    <add key="VBdocman_indentMode"><![CDATA[0]]></add>
+    <add key="VBdocman_insertSourceGlobal"><![CDATA[0]]></add>
+    <add key="VBdocman_unbreakSourceLines"><![CDATA[0]]></add>
+    <add key="VBdocman_removeAttributes"><![CDATA[0]]></add>
+    <add key="VBdocman_generateVbSyntax"><![CDATA[0]]></add>
+    <add key="VBdocman_generateCsharpSyntax"><![CDATA[0]]></add>
+    <add key="VBdocman_generateCppSyntax"><![CDATA[0]]></add>
+    <add key="VBdocman_generateJscriptSyntax"><![CDATA[0]]></add>
+    <add key="VBdocman_supportedPlatforms"><![CDATA[]]></add>
+    <add key="VBdocman_supportedNetFramework"><![CDATA[]]></add>
+    <add key="VBdocman_supportedNetCompactFramework"><![CDATA[]]></add>
+    <add key="VBdocman_supportedXnaFramework"><![CDATA[]]></add>
+    <add key="VBdocman_customVar1"><![CDATA[]]></add>
+    <add key="VBdocman_customVar2"><![CDATA[]]></add>
+    <add key="VBdocman_customVar3"><![CDATA[]]></add>
+    <add key="VBdocman_titlePageText"><![CDATA[]]></add>
+    <add key="VBdocman_rootNamespaceText"><![CDATA[]]></add>
+    <add key="VBdocman_rootNamespaceCommentStyle"><![CDATA[2]]></add>
+    <add key="VBdocman_pageFooterText"><![CDATA[]]></add>
+    <add key="VBdocman_outputPath"><![CDATA[$(ProjectDir)VSdoc]]></add>
+    <add key="VBdocman_templateFolder"><![CDATA[$(VSdocmanDir)Templates]]></add>
+    <add key="VBdocman_externalFilesFolder"><![CDATA[]]></add>
+    <add key="VBdocman_fileNamingConvention"><![CDATA[1]]></add>
+    <add key="VBdocman_templateLocale"><![CDATA[es-ES]]></add>
+    <add key="VBdocman_templatePath"><![CDATA[rtf.vbdt]]></add>
+    <add key="VBdocman_enumSorting"><![CDATA[1]]></add>
+    <add key="VBdocman_helpTitle"><![CDATA[RadgieCore Reference]]></add>
+    <add key="VBdocman_customTopics"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<topics>
+  <topic>
+    <type>normal</type>
+    <is-default>yes</is-default>
+    <name>RadgieCore Reference</name>
+    <id>radgiecore_reference</id>
+    <comment><![CDATA[<summary></summary>vsdocman_escaped_]_]_></comment>
+    <namespaces />
+    <topics>
+      <topic>
+        <type>placeholder</type>
+        <is-default>no</is-default>
+        <name />
+        <id>3460ee7aaf164c869b74fa3c6a16c990</id>
+        <comment><![CDATA[vsdocman_escaped_]_]_></comment>
+        <namespaces />
+        <topics />
+      </topic>
+    </topics>
+  </topic>
+</topics>]]></add>
+    <add key="VBdocman_linkForExternalNotInFramework"><![CDATA[0]]></add>
+    <add key="VBdocman_allowMacrosInComments"><![CDATA[0]]></add>
+    <add key="VBdocman_emptyOutputFolder"><![CDATA[0]]></add>
+    <add key="VBdocman_comModules_Core...AEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...AGameObject.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...AInstance.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...ASystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...AUpdateableAtRate.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...ABoundingVolume.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...BoundingBox.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...BoundingFrustum.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...BoundingSphere.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...CompositeBoundingVolume.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...IBoundingVolume.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...Plane.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...Point.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...BoundingVolumes...Ray.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...Collision...CollisionGroup.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...Collision...CollisionRecord.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...Collision...ICollisionGroup.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...GameComponent.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IActivable.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IDebugObject.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IGameComponent.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IGameComponentObserver.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IGameObject.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IHasContext.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IIdentifiable.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IInstance.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IScene.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...ISceneNode.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...ISystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...IUpdateable.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...Job.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...JobScheduler.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...ParametrizedJob.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...RadgieGame.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...RadgieGameConfiguration.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...RadgieStatistics.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...ResourceManager.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...SystemStatistics.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Core...Transformation.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...BlendStateFileReader.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...DepthStencilStateFileReader.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...MaterialFileReader.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...ParticleSystemSettingsFileReader.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...RasterizerStateFileReader.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...SamplerStateFileReader.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...StringsFile.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...XmlFile.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_File...XmlFileReader.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...ARenderPass.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Camera...Camera2D.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Camera...Camera3D.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Camera...CameraParameters.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Camera...ICamera.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Camera...ICamera2D.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Camera...ICamera3D.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...EntityInstancesRenderer.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...AGraphicEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...ASimpleGraphicEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...BoundingVolume.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...Geometry.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...Light.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...ParticleEmitter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...ParticleSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...SimpleModel.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...Sprite.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Entity...Text.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...GraphicSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...GraphicsSystemStatistics.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IDraw.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IDrawable.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IEntityInstancesRenderer.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IGraphicEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IGraphicInstance.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IGraphicSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...ILight.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IRenderable.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...IRenderer.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Instance...SimpleGraphicInstance.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Material.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...MaterialParameter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Mesh.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...ParticleSystemSettings.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...ParticleVertex.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...ParticlesBuffer.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Quad.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...RenderPass...FullScreenQuadPass.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...RenderPass...MultipleRenderPass.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...RenderPass...MultipleRenderPass2.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...RenderPass...MultipleTexturesRenderPass.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...RenderPass...SceneRenderPass.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...RenderPass...TextureRenderPass.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...RenderState.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...Renderer.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Graphics...StaticGeometry.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...ADevice.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...ADeviceControl.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Action...AAction.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Action...AnalogicalAction.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Action...DigitalAction.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Action...PositionAction.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Adapters...Analogical2AnalogicalAdapter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Adapters...Analogical2DigitalAdapter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Adapters...AnalogicalDirectionControl2AnalogicalAdapter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Adapters...Digital2AnalogicalAdapter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Adapters...DigitalOneShotAdapter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Adapters...Digitals2AnalogicalAdapter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Adapters...IncrementalAnalogicalAdpater.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Control...IAnalogicalControl.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Control...IAnalogicalDirectionControl.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Control...IControl.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Control...IDigitalControl.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Control...IPositionControl.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Control...IScrollControl.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Gamepad...Gamepad.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Gamepad...GamepadButton.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Gamepad...GamepadDPad.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Gamepad...GamepadThumb.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Gamepad...GamepadTrigger.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Gamepad...IGamepad.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Keyboard...IKeyboard.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Keyboard...Keyboard.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Keyboard...KeyboardKey.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Mouse...IMouse.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Mouse...Mouse.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Mouse...MouseButton.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Mouse...MousePosition.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...Device...Mouse...MouseWheel.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...IDevice.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...IInputSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...InputSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Input...InputSystemStatistics.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Properties...AssemblyInfo.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...AScene.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...ASceneNode.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...IComplexSceneNode.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...ISceneSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...Managers...Octree...OctreeScene.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...Managers...Octree...OctreeSceneNode.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...Managers...Simple...SimpleScene.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...Managers...Simple...SimpleSceneNode.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...SceneSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Scene...SceneSystemStatistics.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Sound...ASoundEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Sound...ISoundEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Sound...ISoundSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Sound...SoundEffect.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Sound...SoundSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Sound...SoundSystemStatistics.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...AState.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...AStateEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...AStateMachine.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...Behaviour.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...Event.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...IState.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...IStateEntity.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...IStateMachine.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...IStateSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...StateSystem.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_State...StateSystemStatistics.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...BackCounter.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...BoundingUtil.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Collection...Context...Context.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Collection...Context...IContext.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Collection...Context...Variable.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Collection...ObserverList...ObserverList.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Collection...Pool...Pool.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Collection...ReferencePool...IReferencePool.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Collection...ReferencePool...ReferencePool.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...DebugSceneUtil.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Debug...DebugConsole.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...MathUtil.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...PathUtil.cs"><![CDATA[On]]></add>
+    <add key="VBdocman_comModules_Util...Timer.cs"><![CDATA[On]]></add>
+  </appSettings>
+</configuration>
